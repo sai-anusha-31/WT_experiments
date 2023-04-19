@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <style>
+        form{
+            width: 400px;
+            height: 400px;
+            background-color:white;
+            margin-left: 35%;
+            margin-bottom: 20px;
+            margin-top:30px;
+            border-radius: 5px;
+        }
+        button{
+            border-radius: 3px;
+            font-size: 15px;
+            font-family: sans-serif;
+            color: black;
+            border-width:0;
+            text-align: center;
+            background-color:darkgrey;
+            margin-left: 80px;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function f(){
+        const v1 = parseInt(document.getElementById("dept").value);
+        const v2 = parseInt(document.getElementById("transport").value);
+        const v3 = parseInt(document.getElementById("library").value);
+        const v4 = parseInt(document.getElementById("hostel").value);
+        const v5 =  parseInt(document.getElementById("supply").value);
+        const v6 = v1 + v2 + v3 + v4 + v5;
+        const v7 = v6 + "/-";
+        document.getElementById("p").innerHTML = v7;}
+    </script>
+  </head>  
+<body bgcolor="#81dbf0">
+    <h1 align="center">College Fee Generation</h1>
+    <form class="" id ="" action="" method="post">
+        <table cellspacing = 10px>
+            <tr>
+              <td>
+                <label for="department">Choose a department:</label>
+              </td>
+              <td>
+                <select id="dept" name="department">
+                  <option value="0">None</option>
+                  <option value="60000">CSE</option>
+                  <option value="70000">CSD/CSM</option>
+                  <option value="53000">ECE</option>
+                  <option value="55000">IT</option>
+                  <option value="45000">MECH</option>
+                  <option value="45000">CIVIL</option>
+                  <option value="45000">CHEM</option>
+                  <option value="45000">EEE</option>
+                </select>
+              </td>
+             </tr>
+             <tr>
+                <td>
+                  <label for="transport">Transport:</label>
+                </td>
+
+                <td>
+                  <select id="transport" name="transport">
+                    <option value="0">None</option>
+                    <option value="40000">Gajuwaka</option>
+                    <option value="45000">Steel plant</option>
+                    <option value="20000">Kommadi</option>
+                    <option value="35000">Maddilapalem</option>
+                    <option value="30000">Madhurawada</option>
+                    <option value="35000">Vizianagaram</option>
+                    <option value="30000">Ayinada</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="lib">Library(NO.OF BOOKS)</label>
+                </td>
+                <td>
+                  <select id="library" name="lib">
+                    <option value="0">None</option>
+                    <option value="10">1</option>
+                    <option value="20">2</option>
+                    <option value="30">3</option>
+                    <option value="40">4</option>
+                    <option value="50">5</option>
+                  </select>
+                </td>
+              </tr>
+              
+              <tr>
+                <td>
+                  <label for="Hostel">Hostel(select an year)</label>
+                </td>
+                <td>
+                  <select id="hostel" name="hostel">
+                    <option value="0">None</option>
+                    <option value="60000">1st year</option>
+                    <option value="50000">2nd year</option>
+                    <option value="50000">3rd year</option>
+                    <option value="50000">4th year</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="supply">Supplementary Exams(No of backlogs)</label>
+                </td>
+                <td>
+                  <select id="supply" name="supply">
+                    <option value="0">None</option>
+                    <option value="300">1</option>
+                    <option value="600">2</option>
+                    <option value="900">3</option>
+                    <option value="1200">4</option>
+                    <option value="1500">5</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="button" name="button" onclick="f()" align="center">submit</button>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <p>Your total fee is:</p>
+                </td>
+                <td>
+                  <p id="p"></p>
+                </td>
+              </tr>
+    </table>
+    </form>
+
+    
+</body>
+</html>

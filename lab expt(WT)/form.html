@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <style>
+        body{
+                
+            background-image:url("bgimg2.png");
+            -webkit-background-size:cover;
+            -moz-background-size:cover;
+            -o-background-size:cover;
+            background-size:cover;
+           
+        }
+        h1 {
+ color:#9d63ba;
+ text-align: center;
+ font-family: 'Lucida Sans';
+ font-size:35px;
+}
+a{
+ line-height: 3;
+ text-decoration: underline;
+ text-align: center;
+}
+.box1{
+    background-color: white;
+    width:200px;
+    height:500px;
+    border-radius: 5px;
+    padding-left:40%;
+}
+.btn1{
+    border-radius: 4px;
+    border-width: 0;
+    color: white;
+    background-color: #74b0ac;
+    padding: 10px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+.btn2{
+    border-radius: 4px;
+    border-width: 0;
+    color: white;
+    background-color: #74b0ac;
+    padding: 10px;
+    margin-left: 50px;
+    font-size: 18px;
+}
+form{
+    padding-left:40%;
+    font-size: 18px;
+    font-family:'Times New Roman', Times, serif;
+}
+    </style>
+    
+    </head>
+    <body>
+        <h1>Registration Form</h1>
+    
+    <form name="f1" action = "/.html" method = "post/get">
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" name = "nm" placeholder = "enter your name" max = 5 maxlength = 20 required = "required">
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="email" name = "eid" placeholder = "enter your mail">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" name="pwd"></td>
+        </tr>
+        <tr>
+            <td>DOB</td>
+            <td><input type="date" name="dob"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><input type="radio" name="gen" value="male">M</td>
+            <td><input type="radio" name="gen" value="female">F</td>
+        </tr>
+        <tr>
+            <td>religion</td>
+            <td>
+                <select name="db" id=" ">
+                    <option value="h">hindu</option>
+                    <option value="m">muslim</option>
+                    <option value="c">christian</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>languages</td>
+            <td>
+                <input type="checkbox">telugu
+                <input type="checkbox">english
+                <input type="checkbox">hindi
+            </td>
+        </tr>
+        <tr>
+            <td>address</td>
+            <td><textarea name=" " id=" " cols="30" rows="8"></textarea> </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="submit" name="submit" class="btn1">
+            </td>
+            <td>
+                <input type="reset" name="reset" class="btn2">
+            </td>
+        </tr>
+    </table>
+   
+</form>
+
+</body>
+</html>

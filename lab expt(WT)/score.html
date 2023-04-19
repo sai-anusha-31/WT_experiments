@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <style>
+        #player{
+            position: absolute;
+            top:0;
+            left: 0px;
+            width:30px;
+            height:30px;
+            background-color:red;
+         }
+         #score{
+            position:absolute;
+            top:10px;
+            right:10px;
+            font-size:20px;
+         }
+         #co-ord{
+            position:absolute;
+            left: 20px;
+            top:10px;
+         }  
+         body{
+            background-color:dimgray;
+            color: white;
+         }
+        </style>     
+    </head>
+    <body>
+        <h1 align = "center">SCORING GAME</h1>
+        <div id = "player"></div>
+        <div id = "score">score: 0</div>
+        <div id = "co-ord"></div>
+        <script>
+            var p =document.getElementById("player");
+            var s = document.getElementById("score");
+            var c = document.getElementById("co-ord");
+            var score = 0;
+            var position = {x:0,y:0};
+           
+            document.addEventListener("keydown",function(event)
+            {   
+                if (event.key == "ArrowDown")
+                {
+                    position.y += 10;
+                }
+                else if(event.key == "ArrowUp")
+                {
+                    position.y -= 10;
+                }
+                else if(event.key == "ArrowLeft")
+                {
+                    position.x -= 10;
+                }
+                else if(event.key == "ArrowRight")
+                {
+                    position.x += 10;
+                }
+                p.style.top = position.y + "px";
+                p.style.left = position.x + "px";
+                c.innerHTML = "COORD:"+position.x + "," + position.y;
+                if (position.x === 10 && position.y === 10)
+                {
+                    score += 50;
+                    s.innerHTML = "SCORE: "+ score;
+                }
+            });
+          </script>
+    </body>
+</html>
